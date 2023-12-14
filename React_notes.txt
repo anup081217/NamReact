@@ -207,9 +207,21 @@ There can be two way to render the page :-->
 
 1:15
 
-UseEffect --> work like callback function .It doesnot get called immiediatly but called when required .and react will make sure its called at specific time .
+1:29 - must go to understand useEffect dependencies
 
-UseEffect( () => {console.log('render')} , [] )
+UseEffect --> work like callback function .It doesnot get called immiediatly but called when required .and react will make sure its called at specific time .
+         Use effect is basically 1.render the page first ..2.then call the API and ..then3. Load the UI .
+         this gives a better user experience . 
+
+UseEffect( () => {console.log('render')} , [] ) 
+[] here is dependencies
+
+example :
+
+UseEffect ( () => {console.log('render)}, [searchinput])
+
+It means the useEffect i.e console.log('render') is dependent on dependencies ie [searchinput]
+ie useEffect i.e console.log('render') will be called only when [searchinput] is called .
 
 Noramlly at every page load function will call console.log('render') but we dont need ot to be called everytime .that is why we use Dependencies array [] .which enable our function to be called time we want .
 UseEffect is nothing but a hook and hook is nothing but a function.
