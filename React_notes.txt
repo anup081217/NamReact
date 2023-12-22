@@ -223,6 +223,12 @@ UseEffect ( () => {console.log('render)}, [searchinput])
 It means the useEffect i.e console.log('render') is dependent on dependencies ie [searchinput]
 ie useEffect i.e console.log('render') will be called only when [searchinput] is called .
 
+If dependencies are blank ,the useEffect will be called only once as its not dependent on anything now 
+
+
+empty dependencies array --> use effect is called once after render .
+whne dependencies array[searchtext] is defined --> use effect is called once after render + everytime after rerender(ie searchtext changes)
+
 Noramlly at every page load function will call console.log('render') but we dont need ot to be called everytime .that is why we use Dependencies array [] .which enable our function to be called time we want .
 UseEffect is nothing but a hook and hook is nothing but a function.
 
