@@ -265,6 +265,8 @@ import { createBrowserRouter ,Routerprovider } from "react-router-dom"; --> help
 
 ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ 
 
+react router dom is not created by meta but by Remix .
+
 How to create Routing 👍
 
 1 . import { createBrowserRouter ,Routerprovider } from "react-router-dom";
@@ -319,21 +321,47 @@ const Error = () => {
     <div>
         <h1>OOPS ! We have an Error</h1>
         <p>Something went Wrong !!</p>
+        <h3> {err. statusText} + {err.status} <h3> 
     </div>
   )
 }
+
+
+if error page is like below we can use the codes to show in error page 
+{err. statusText} + {err.status}
+
+rror
+: 
+Error: No route matches URL "/ddd" at getInternalRouterError (http://localhost:1234/index.7271efb6.js:33836:61) at createRouter (http://localhost:1234/index.7271efb6.js:31528:21) at createBrowserRouter (http://localhost:1234/index.7271efb6.js:27925:37) at 2kQhy.react/jsx-dev-runtime (http://localhost:1234/index.7271efb6.js:2989:59) at newRequire (http://localhost:1234/index.7271efb6.js:71:24) at http://localhost:1234/index.7271efb6.js:122:5 at http://localhost:1234/index.7271efb6.js:145:3
+internal
+:true
+status
+: 
+404
+
+statusText
+: 
+"Not Found"
+[[Prototype]]
+: 
+Object
 
 1:20:00
 
 SPA -single page application ==> When u click one thing it does not load whole page .
 
+Problem with anchor tag is it refreshes the whole page .
+<li> <href='/about'>About</li>
+
 Two type of routing 👍
 --------------------
- 1.CLIENT side routing : new way ,clcik on about page it will go directly tp page ,no need to go to server .in react we use this routing 
+ 1.CLIENT side routing : new way ,clcik on about page it will go directly to page ,no need to go to server .in react we use this routing 
  2. server side routing : is way that all are pages come from server .(older way to laod page)
 
 
  How to use href in react we dont use href in react we use link to  👍
+
+ Link is also developed by remix and bundled in react-router-dom .
 
  import { Link } from "react-router-dom";
 
@@ -345,6 +373,8 @@ Two type of routing 👍
 import { createBrowserRouter , RouterProvider  , Outlet} from "react-router-dom";
 
 2.define <Outlet/> --all the childeren will be called by outlet . 👍
+
+ Whatever children in App "AppLayout" will be called by "Outlet"
 const AppLayout = () => {
    return (
     <>
@@ -386,3 +416,13 @@ const appRouter = createBrowserRouter ([
   },
 
 1:50:00 -- Dynamic Routing 👍
+
+import {useParams} from 'react-router-dom' --> helps reading the id .It is hook .
+
+
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+
+10 .LETS GET CLASSY 
+
+
+

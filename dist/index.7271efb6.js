@@ -2962,22 +2962,24 @@ var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 var _error = require("./component/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
+var _resturantMenu = require("./component/ResturantMenu");
+var _resturantMenuDefault = parcelHelpers.interopDefault(_resturantMenu);
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 14,
+                lineNumber: 15,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 15,
+                lineNumber: 16,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 16,
+                lineNumber: 17,
                 columnNumber: 5
             }, undefined)
         ]
@@ -2989,13 +2991,13 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 12
         }, undefined),
         // element : <Body/>,
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 23,
+            lineNumber: 24,
             columnNumber: 17
         }, undefined),
         children: [
@@ -3003,7 +3005,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 26,
+                    lineNumber: 27,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3011,7 +3013,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 30,
+                    lineNumber: 31,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3019,7 +3021,15 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 34,
+                    lineNumber: 35,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "/resturant/:resid",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resturantMenuDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 39,
                     columnNumber: 14
                 }, undefined)
             }
@@ -3031,7 +3041,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 40,
+    lineNumber: 43,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3042,7 +3052,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./component/Header":"knXDc","./component/Body":"iizf5","./component/Footer":"4ifUV","./component/constants":"5Qqzf","react-router-dom":"9xmpe","./component/About":"94Koj","./component/Error":"cosKY","./component/Contact":"3He1d"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./component/Header":"knXDc","./component/Body":"iizf5","./component/Footer":"4ifUV","./component/constants":"5Qqzf","react-router-dom":"9xmpe","./component/About":"94Koj","./component/Contact":"3He1d","./component/Error":"cosKY","./component/ResturantMenu":"02mDE"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27612,7 +27622,7 @@ exports.getOrigin = getOrigin;
 
 },{}],"9xmpe":[function(require,module,exports) {
 /**
- * React Router DOM v6.21.0
+ * React Router DOM v6.21.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -29014,7 +29024,7 @@ let savedScrollPositions = {};
 
 },{"react":"21dqq","react-dom":"j6uA9","react-router":"dbWyW","@remix-run/router":"5ncDG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dbWyW":[function(require,module,exports) {
 /**
- * React Router v6.21.0
+ * React Router v6.21.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -29361,7 +29371,7 @@ function useRoutesImpl(routes, locationArg, dataRouterState, future) {
         pathname: remainingPathname
     });
     (0, _router.UNSAFE_warning)(parentRoute || matches != null, 'No routes matched location "' + location.pathname + location.search + location.hash + '" ');
-    (0, _router.UNSAFE_warning)(matches == null || matches[matches.length - 1].route.element !== undefined || matches[matches.length - 1].route.Component !== undefined, 'Matched leaf route at location "' + location.pathname + location.search + location.hash + '" ' + "does not have an element or Component. This means it will render an <Outlet /> with a " + 'null value by default resulting in an "empty" page.');
+    (0, _router.UNSAFE_warning)(matches == null || matches[matches.length - 1].route.element !== undefined || matches[matches.length - 1].route.Component !== undefined || matches[matches.length - 1].route.lazy !== undefined, 'Matched leaf route at location "' + location.pathname + location.search + location.hash + '" ' + "does not have an element or Component. This means it will render an <Outlet /> with a " + 'null value by default resulting in an "empty" page.');
     let renderedMatches = _renderMatches(matches && matches.map((match)=>Object.assign({}, match, {
             params: Object.assign({}, parentParams, match.params),
             pathname: (0, _router.joinPaths)([
@@ -29509,16 +29519,20 @@ function _renderMatches(matches, parentMatches, dataRouterState, future) {
         let match = renderedMatches[i];
         // Track the deepest fallback up until the first route without data
         if (match.route.HydrateFallback || match.route.hydrateFallbackElement) fallbackIndex = i;
-        if (match.route.loader && match.route.id && dataRouterState.loaderData[match.route.id] === undefined && (!dataRouterState.errors || dataRouterState.errors[match.route.id] === undefined)) {
-            // We found the first route without data/errors which means it's loader
-            // still needs to run.  Flag that we need to render a fallback and
-            // render up until the appropriate fallback
-            renderFallback = true;
-            if (fallbackIndex >= 0) renderedMatches = renderedMatches.slice(0, fallbackIndex + 1);
-            else renderedMatches = [
-                renderedMatches[0]
-            ];
-            break;
+        if (match.route.id) {
+            let { loaderData, errors } = dataRouterState;
+            let needsToRunLoader = match.route.loader && loaderData[match.route.id] === undefined && (!errors || errors[match.route.id] === undefined);
+            if (match.route.lazy || needsToRunLoader) {
+                // We found the first route that's not ready to render (waiting on
+                // lazy, or has a loader that hasn't run yet).  Flag that we need to
+                // render a fallback and render up until the appropriate fallback
+                renderFallback = true;
+                if (fallbackIndex >= 0) renderedMatches = renderedMatches.slice(0, fallbackIndex + 1);
+                else renderedMatches = [
+                    renderedMatches[0]
+                ];
+                break;
+            }
         }
     }
     return renderedMatches.reduceRight((outlet, match, index)=>{
@@ -30257,7 +30271,7 @@ function createMemoryRouter(routes, opts) {
 
 },{"react":"21dqq","@remix-run/router":"5ncDG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5ncDG":[function(require,module,exports) {
 /**
- * @remix-run/router v1.14.0
+ * @remix-run/router v1.14.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -31150,34 +31164,20 @@ function getResolveToMatches(matches, v7_relativeSplatPath) {
     // hash string, in which case we should assume that the navigation is relative
     // to the current location's pathname and *not* the route pathname.
     if (toPathname == null) from = locationPathname;
-    else if (isPathRelative) {
-        let fromSegments = routePathnames.length === 0 ? [] : routePathnames[routePathnames.length - 1].replace(/^\//, "").split("/");
-        if (toPathname.startsWith("..")) {
-            let toSegments = toPathname.split("/");
-            // With relative="path", each leading .. segment means "go up one URL segment"
-            while(toSegments[0] === ".."){
-                toSegments.shift();
-                fromSegments.pop();
-            }
-            to.pathname = toSegments.join("/");
-        }
-        from = "/" + fromSegments.join("/");
-    } else {
+    else {
         let routePathnameIndex = routePathnames.length - 1;
-        if (toPathname.startsWith("..")) {
+        // With relative="route" (the default), each leading .. segment means
+        // "go up one route" instead of "go up one URL segment".  This is a key
+        // difference from how <a href> works and a major reason we call this a
+        // "to" value instead of a "href".
+        if (!isPathRelative && toPathname.startsWith("..")) {
             let toSegments = toPathname.split("/");
-            // With relative="route" (the default), each leading .. segment means
-            // "go up one route" instead of "go up one URL segment".  This is a key
-            // difference from how <a href> works and a major reason we call this a
-            // "to" value instead of a "href".
             while(toSegments[0] === ".."){
                 toSegments.shift();
                 routePathnameIndex -= 1;
             }
             to.pathname = toSegments.join("/");
         }
-        // If there are more ".." segments than parent routes, resolve relative to
-        // the root / URL.
         from = routePathnameIndex >= 0 ? routePathnames[routePathnameIndex] : "/";
     }
     let path = resolvePath(to, from);
@@ -32278,31 +32278,37 @@ const TRANSITIONS_STORAGE_KEY = "remix-router-transitions";
             if (fetchControllers.get(key) === abortController) fetchControllers.delete(key);
             return;
         }
-        if (deletedFetchers.has(key)) {
-            updateFetcherState(key, getDoneFetcher(undefined));
-            return;
-        }
-        if (isRedirectResult(actionResult)) {
-            fetchControllers.delete(key);
-            if (pendingNavigationLoadId > originatingLoadId) {
-                // A new navigation was kicked off after our action started, so that
-                // should take precedence over this redirect navigation.  We already
-                // set isRevalidationRequired so all loaders for the new route should
-                // fire unless opted out via shouldRevalidate
+        // When using v7_fetcherPersist, we don't want errors bubbling up to the UI
+        // or redirects processed for unmounted fetchers so we just revert them to
+        // idle
+        if (future.v7_fetcherPersist && deletedFetchers.has(key)) {
+            if (isRedirectResult(actionResult) || isErrorResult(actionResult)) {
                 updateFetcherState(key, getDoneFetcher(undefined));
                 return;
-            } else {
-                fetchRedirectIds.add(key);
-                updateFetcherState(key, getLoadingFetcher(submission));
-                return startRedirectNavigation(state, actionResult, {
-                    fetcherSubmission: submission
-                });
             }
-        }
-        // Process any non-redirect errors thrown
-        if (isErrorResult(actionResult)) {
-            setFetcherError(key, routeId, actionResult.error);
-            return;
+        } else {
+            if (isRedirectResult(actionResult)) {
+                fetchControllers.delete(key);
+                if (pendingNavigationLoadId > originatingLoadId) {
+                    // A new navigation was kicked off after our action started, so that
+                    // should take precedence over this redirect navigation.  We already
+                    // set isRevalidationRequired so all loaders for the new route should
+                    // fire unless opted out via shouldRevalidate
+                    updateFetcherState(key, getDoneFetcher(undefined));
+                    return;
+                } else {
+                    fetchRedirectIds.add(key);
+                    updateFetcherState(key, getLoadingFetcher(submission));
+                    return startRedirectNavigation(state, actionResult, {
+                        fetcherSubmission: submission
+                    });
+                }
+            }
+            // Process any non-redirect errors thrown
+            if (isErrorResult(actionResult)) {
+                setFetcherError(key, routeId, actionResult.error);
+                return;
+            }
         }
         if (isDeferredResult(actionResult)) throw getInternalRouterError(400, {
             type: "defer-action"
@@ -32409,6 +32415,8 @@ const TRANSITIONS_STORAGE_KEY = "remix-router-transitions";
         // re-load which would have put _new_ controller is in fetchControllers
         if (fetchControllers.get(key) === abortController) fetchControllers.delete(key);
         if (fetchRequest.signal.aborted) return;
+        // We don't want errors bubbling up or redirects followed for unmounted
+        // fetchers, so short circuit here if it was removed from the UI
         if (deletedFetchers.has(key)) {
             updateFetcherState(key, getDoneFetcher(undefined));
             return;
@@ -33311,12 +33319,15 @@ function getMatchesToLoad(history, state, matches, submission, location, isIniti
     let boundaryId = pendingError ? Object.keys(pendingError)[0] : undefined;
     let boundaryMatches = getLoaderMatchesUntilBoundary(matches, boundaryId);
     let navigationMatches = boundaryMatches.filter((match, index)=>{
-        if (isInitialLoad) // On initial hydration we don't do any shouldRevalidate stuff - we just
-        // call the unhydrated loaders
-        return isUnhydratedRoute(state, match.route);
-        if (match.route.lazy) // We haven't loaded this route yet so we don't know if it's got a loader!
+        let { route } = match;
+        if (route.lazy) // We haven't loaded this route yet so we don't know if it's got a loader!
         return true;
-        if (match.route.loader == null) return false;
+        if (route.loader == null) return false;
+        if (isInitialLoad) {
+            if (route.loader.hydrate) return true;
+            return state.loaderData[route.id] === undefined && // Don't re-run if the loader ran and threw an error
+            (!state.errors || state.errors[route.id] === undefined);
+        }
         // Always call the loader on new route instances and pending defer cancellations
         if (isNewLoader(state.loaderData, state.matches[index], match) || cancelledDeferredRoutes.some((id)=>id === match.route.id)) return true;
         // This is the default implementation for when we revalidate.  If the route
@@ -33401,14 +33412,6 @@ function getMatchesToLoad(history, state, matches, submission, location, isIniti
         navigationMatches,
         revalidatingFetchers
     ];
-}
-// Is this route unhydrated (when v7_partialHydration=true) such that we need
-// to call it's loader on the initial router creation
-function isUnhydratedRoute(state, route) {
-    if (!route.loader) return false;
-    if (route.loader.hydrate) return true;
-    return state.loaderData[route.id] === undefined && (!state.errors || // Loader ran but errored - don't re-run
-    state.errors[route.id] === undefined);
 }
 function isNewLoader(currentLoaderData, currentMatch, match) {
     let isNew = // [a] -> [a, b]
@@ -34121,9 +34124,9 @@ const Body = ()=>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         console.log(json);
-        console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setallResturants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setfilteredResturants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        console.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setallResturants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setfilteredResturants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
     console.log("render");
     // if (!allResturants)  return null ;
@@ -35195,7 +35198,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Footer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-        children: "Footer"
+        children: "@ Footer-WeEat private Limited.All Rights reserved . @"
     }, void 0, false, {
         fileName: "src/component/Footer.js",
         lineNumber: 2,
@@ -35261,6 +35264,66 @@ var _c;
 $RefreshReg$(_c, "About");
 
   $parcel$ReactRefreshHelpers$77f7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3He1d":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$fc23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$fc23.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Contact = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Contact Us "
+            }, void 0, false, {
+                fileName: "src/component/Contact.js",
+                lineNumber: 3,
+                columnNumber: 15
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "Email : WeEat.UnitedKingdom@gmail.com"
+            }, void 0, false, {
+                fileName: "src/component/Contact.js",
+                lineNumber: 4,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: " Call Us : +44-21212121 "
+            }, void 0, false, {
+                fileName: "src/component/Contact.js",
+                lineNumber: 5,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: "Note: We value your privacy and your information is safe with us. Please do not reveal any personal information, bank account number, OTP etc. to another person. A WeEat representative will never ask you for these details. Please do not reveal these details to fraudsters and imposters claiming to be calling on our behalf. Be vigilant and do not entertain phishing calls or emails."
+            }, void 0, false, {
+                fileName: "src/component/Contact.js",
+                lineNumber: 6,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/component/Contact.js",
+        lineNumber: 3,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Contact;
+exports.default = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$fc23.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -35332,59 +35395,138 @@ $RefreshReg$(_c, "Error");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router":"dbWyW"}],"3He1d":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$fc23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dbWyW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"02mDE":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9e3d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$fc23.prelude(module);
+$parcel$ReactRefreshHelpers$9e3d.prelude(module);
 
 try {
+// const data =  await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING" + resid)
+// single rest API
+// https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9492616&lng=77.722105&restaurantId=241961&catalog_qa=undefined&query=Biryani&submitAction=ENTER 
+// https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9492616&lng=77.722105&restaurantId=250298
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-const Contact = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+var _reactRouterDom = require("react-router-dom");
+var _constants = require("./constants");
+var _shimmer = require("./shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _s = $RefreshSig$();
+const ResturantMenu = ()=>{
+    _s();
+    const params = (0, _reactRouterDom.useParams)();
+    const { resid } = params;
+    console.log(params);
+    const [Resturant, setResturant] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        getResturantInfo();
+    }, []);
+    async function getResturantInfo() {
+        const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9492616&lng=77.722105&restaurantId=" + resid);
+        const json = await data.json();
+        console.log(json);
+        setResturant(json.data);
+        console.log(json.data);
+    }
+    return !Resturant ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/component/ResturantMenu.js",
+        lineNumber: 29,
+        columnNumber: 23
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Menu",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Contact Us "
-            }, void 0, false, {
-                fileName: "src/component/Contact.js",
-                lineNumber: 3,
-                columnNumber: 15
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Email : WeEat.UnitedKingdom@gmail.com"
-            }, void 0, false, {
-                fileName: "src/component/Contact.js",
-                lineNumber: 4,
+                children: [
+                    "Resturant id : ",
+                    resid,
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "src/component/ResturantMenu.js",
+                lineNumber: 31,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: " Call Us : +44-21212121 "
+                children: Resturant?.cards[0]?.card?.card?.info?.name
             }, void 0, false, {
-                fileName: "src/component/Contact.js",
-                lineNumber: 5,
+                fileName: "src/component/ResturantMenu.js",
+                lineNumber: 32,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _constants.IMG_CDN_URL) + Resturant?.cards[0]?.card?.card?.info?.cloudinaryImageId
+            }, void 0, false, {
+                fileName: "src/component/ResturantMenu.js",
+                lineNumber: 33,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: [
+                    "City :",
+                    Resturant?.cards[0]?.card?.card?.info?.city
+                ]
+            }, void 0, true, {
+                fileName: "src/component/ResturantMenu.js",
+                lineNumber: 34,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: [
+                    " locality : ",
+                    Resturant?.cards[0]?.card?.card?.info?.areaName
+                ]
+            }, void 0, true, {
+                fileName: "src/component/ResturantMenu.js",
+                lineNumber: 35,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: [
+                    " costForTwo :",
+                    Resturant?.cards[0]?.card?.card?.info?.costForTwoMessage
+                ]
+            }, void 0, true, {
+                fileName: "src/component/ResturantMenu.js",
+                lineNumber: 36,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: [
+                    " Rating :",
+                    Resturant?.cards[0]?.card?.card?.info?.avgRating,
+                    " Stars"
+                ]
+            }, void 0, true, {
+                fileName: "src/component/ResturantMenu.js",
+                lineNumber: 37,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/component/Contact.js",
-        lineNumber: 3,
-        columnNumber: 10
+        fileName: "src/component/ResturantMenu.js",
+        lineNumber: 29,
+        columnNumber: 37
     }, undefined);
 };
-_c = Contact;
-exports.default = Contact;
+_s(ResturantMenu, "h6oiYzmsWymL8oACgbjHnCYIfF4=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams)
+    ];
+});
+_c = ResturantMenu;
+exports.default = ResturantMenu;
 var _c;
-$RefreshReg$(_c, "Contact");
+$RefreshReg$(_c, "ResturantMenu");
 
-  $parcel$ReactRefreshHelpers$fc23.postlude(module);
+  $parcel$ReactRefreshHelpers$9e3d.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["bgABq","1xC6H","2kQhy"], "2kQhy", "parcelRequire164e")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./constants":"5Qqzf","./shimmer":"bltIQ"}]},["bgABq","1xC6H","2kQhy"], "2kQhy", "parcelRequire164e")
 
 //# sourceMappingURL=index.7271efb6.js.map

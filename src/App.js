@@ -11,6 +11,7 @@ import Contact from "./component/Contact";
 
 import ReactDOM, { createRoot } from "react-dom/client";
 import Error from "./component/Error";
+import ResturantMenu from "./component/ResturantMenu";
 
 
 
@@ -53,6 +54,10 @@ const AppLayout = () => {
         element : < Contact />,
         // errorElement : < Error/>
         
+      } ,
+      {
+        path : "/resturant/:resid" ,
+        element : <ResturantMenu/>,
       }
     ]
 
