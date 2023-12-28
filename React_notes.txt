@@ -196,6 +196,11 @@ const [ searchtext , usesearchtext] = useState('burger')
 whenever we made any change in UI the same is not updated by react as react doesnot know what changes are being made  .By using state the UI and backend are in sync .it know what was changed and updates realtime.
 but while using state react watches the chnages and it auto rerender .
 
+Precautions :
+useState is use to create local variable within the functional component .So never use the usestate outside functional component.
+
+useState should not be used inside if-else ,for .
+
 ****** 8.Explore the world *****
 
 There can be two way to render the page :-->
@@ -226,16 +231,158 @@ ie useEffect i.e console.log('render') will be called only when [searchinput] is
 If dependencies are blank ,the useEffect will be called only once as its not dependent on anything now 
 
 
-empty dependencies array --> use effect is called once after render .
-whne dependencies array[searchtext] is defined --> use effect is called once after render + everytime after rerender(ie searchtext changes)
+empty dependencies array  UseEffect ( () => {console.log('render)}, [])--> use effect is called once after render .
+whne dependencies array[searchtext] is defined UseEffect ( () => {console.log('render)}, [searchinput]) --> use effect is called once after render + everytime after rerender(ie searchtext changes)
+
+if no dependency array -- > UseEffect ( () => {console.log('render)}) --> use effect will be called after every render .
 
 Noramlly at every page load function will call console.log('render') but we dont need ot to be called everytime .that is why we use Dependencies array [] .which enable our function to be called time we want .
 UseEffect is nothing but a hook and hook is nothing but a function.
 
+useEffect is called after the component is rerendered.
+
 
 shimmer ui --> instead of loading loader UI use boxes so that it give good experience to users
 
+2:17 conditional rendering .
 
 
+99% of time I will use useState and useEffect hooks only .
+
+++++++++++++++++++++++++++++++++
+9.FINDING THE PATH 
+++++++++++++++++++++++++++++++++
+use NPM extentions when you want to do some huge task the extentions u need not to do the coding .
+
+FORMIK -- if u want to create forms.
+
+npm i react-router-dom
+
+in App.js 
+import { createBrowserRouter ,Routerprovider } from "react-router-dom"; --> help us create routing .routerprovider provide route.
+
+43:00 -- routing 
+
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ 
+
+How to create Routing 👍
+
+1 . import { createBrowserRouter ,Routerprovider } from "react-router-dom";
+
+2. create createBrowserRouter with name as appRouter .this will define the list of  path i.e "/" and "about" 👍
+
+const appRouter = createBrowserRouter ([
+  {
+    path : "/" ,
+    element : < AppLayout />
+    
+  },
+
+  {
+    path : "about" ,
+    element : < About />
+    
+  }
+  
+  ])
 
 
+  3. Use Routerprovider to define the router in our case its appRouter .
+
+  root.render(<RouterProvider router={appRouter} />);
+
+
+  +++
+  http://localhost:1234/about or http://localhost:1234
+
+  will give the page but what if http://localhost:1234/xsdd and ambigous page is hit .DOM is so powerful that it doesnot give error but show page from DOM
+  We can also design our own error page .
+
+  ++++
+  1:00:00
+  import { useRouteError } from 'react-router'
+
+  useRouteError is a hook .
+
+  import { useRouteError } from 'react-router'
+  it detect the error itself 
+
+  here if we give incorrect URL the useRouteError is smart enough to detect the error and give in console.log 
+
+  http://localhost:1234/about/kkxxcsdsdwdwd
+
+const Error = () => {
+
+    const err = useRouteError();
+    console.log(err);
+  return (
+    <div>
+        <h1>OOPS ! We have an Error</h1>
+        <p>Something went Wrong !!</p>
+    </div>
+  )
+}
+
+1:20:00
+
+SPA -single page application ==> When u click one thing it does not load whole page .
+
+Two type of routing 👍
+--------------------
+ 1.CLIENT side routing : new way ,clcik on about page it will go directly tp page ,no need to go to server .in react we use this routing 
+ 2. server side routing : is way that all are pages come from server .(older way to laod page)
+
+
+ How to use href in react we dont use href in react we use link to  👍
+
+ import { Link } from "react-router-dom";
+
+ and then 
+ <li> <Link to='/about'>About</Link></li>
+
+ 1:33:00 :Nested Routing 👍 :
+1. import outlet from react-router-dom
+import { createBrowserRouter , RouterProvider  , Outlet} from "react-router-dom";
+
+2.define <Outlet/> --all the childeren will be called by outlet . 👍
+const AppLayout = () => {
+   return (
+    <>
+    
+    <Header/>
+    
+   <Outlet/>
+    <Footer/>
+    </>
+   )
+
+ }
+
+ 3. Create children like below ⬇️
+
+const appRouter = createBrowserRouter ([
+  {
+    path : "/" ,
+    element : < AppLayout />,
+    // element : <Body/>,
+    errorElement : < Error/>,
+    children : [
+      {
+        path : "about" ,
+        element : < About />,
+        // errorElement : < Error/>
+        
+      },
+      
+      {
+        path : "contact" ,
+        element : < Contact />,
+        // errorElement : < Error/>
+        
+      }
+    ]
+
+    
+  },
+
+1:50:00 -- Dynamic Routing 👍

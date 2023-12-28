@@ -44,3 +44,13 @@ height: 100px;
   flex-wrap: wrap;
 
 }
+
+.Shimmer-card {
+
+  width: 200px;
+  height: 100px;
+  color: rgb(29, 18, 18);
+  border: 5px;
+  background-color: gray;
+  margin: 20px;
+}

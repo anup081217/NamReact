@@ -37,4 +37,13 @@
   display: flex;
 }
 
+.Shimmer-card {
+  color: #1d1212;
+  background-color: gray;
+  border: 5px;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+}
+
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

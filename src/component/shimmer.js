@@ -1,5 +1,20 @@
 
-import React from 'react'
+const Shimmer = () => {
+    return (
+    <div className="resturant-list">
+    <div className="Shimmer-card">Loading..</div>
+    <div className="Shimmer-card">Loading..</div>
+    <div className="Shimmer-card">Loading..</div>
+    <div className="Shimmer-card">Loading..</div>
+    <div className="Shimmer-card">Loading..</div>
+    <div className="Shimmer-card">Loading..</div>
 
-const shimmer = "hello shimmer"
-export default shimmer
+
+    </div>
+
+     
+       
+    )
+};
+
+export default Shimmer ;

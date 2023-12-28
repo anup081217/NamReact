@@ -1,11 +1,17 @@
 import {Resturantlist} from "./constants"
 import ResturantCard from "./Reaturantcard";
 import {useState ,useEffect} from "react";
+import Shimmer from "./shimmer";
+
+
 
 
 function filterData(searchinput,resturants) {
     const filterData =
-    resturants.filter((resturant) => resturant.card.card.info.name.includes(searchinput) 
+    // resturants.filter((resturant) => resturant.card.card.info.name.includes(searchinput) 
+    resturants.filter((resturant) => resturant.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.toLowerCase().includes(searchinput.toLowerCase())
+
+    // resturants.filter((resturant) => resturant.info.resturants.includes(searchinput)
     )
     return filterData;
 }
@@ -30,6 +36,7 @@ const Body = ()=>{
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING")
 
     const json =  await data.json();
+    console.log(json)
     console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setallResturants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setfilteredResturants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -40,10 +47,13 @@ const Body = ()=>{
    console.log('render')
 
    
+  // if (!allResturants)  return null ;
 
-    
+  // if (filteredResturants === 0 ) return("No results for this input");
+  
+  //  
 
-    return  (
+    return  allResturants?.length === 0 ? (<Shimmer/>) : (
         
     <>
       <div className = "search-container">
@@ -76,7 +86,7 @@ const Body = ()=>{
 
       <div className="resturant-list">
           {
-          filteredResturants.map((resturant) => {
+          filteredResturants?.map((resturant) => {
               return(
               // < ResturantCard {...resturant.card.card.info} key ={resturant.card.card.info} />
             < ResturantCard {...resturant.info} key ={resturant.info} />
@@ -86,7 +96,7 @@ const Body = ()=>{
           }
         
           
-          
+        
           
   
   
