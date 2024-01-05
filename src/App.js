@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { lazy,Suspense } from "react";
 import Header from "./component/Header";
 import Body from "./component/Body";
 import Footer from "./component/Footer";
@@ -12,6 +12,10 @@ import Contact from "./component/Contact";
 import ReactDOM, { createRoot } from "react-dom/client";
 import Error from "./component/Error";
 import ResturantMenu from "./component/ResturantMenu";
+import Shimmer from "./component/shimmer";
+// import Instamart from "./component/Instamart";
+
+const Instamart = lazy( ()=> import("./component/Instamart"))
 
 
 
@@ -58,6 +62,10 @@ const AppLayout = () => {
       {
         path : "/resturant/:resid" ,
         element : <ResturantMenu/>,
+      },
+      {
+        path : "/Instamart" ,
+        element :<Suspense fallback = {<Shimmer/>}><Instamart/></Suspense> ,
       }
     ]
 

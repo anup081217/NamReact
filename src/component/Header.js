@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import wieat from "../assets/img/wieat.png"
 import { Link } from "react-router-dom";
+import useOnline from '../../utils/useOnline';
 
 
 // const LoggedInUser  = ()=> {
@@ -29,6 +30,7 @@ const Title = () => {
 const Header = () => {
    const [isLoggedIn, setisLoggedin] = useState(true)
    const [TitleHeading , setTitleHeading] = useState("WiEat")
+   const isOnline = useOnline()
     return (
       <div className="header">
         <Title/>
@@ -45,9 +47,14 @@ const Header = () => {
             
             <li> <Link to='/about'>About</Link></li>
             <li> <Link to = '/contact'>Contact</Link></li>
+            <li> <Link to = '/Instamart'>Instamart</Link></li>
+
             <li>Cart</li>
             
           </ul>
+          
+          <h3>{isOnline ? '🟢-Online' : '🔴-offline '}</h3>
+          
         </div>
         {
         isLoggedIn ? <button onClick={()=> setisLoggedin(false)}>Logout</button> : <button onClick={()=> setisLoggedin(true)}>Login</button>

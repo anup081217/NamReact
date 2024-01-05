@@ -2,19 +2,13 @@ import {Resturantlist} from "./constants"
 import ResturantCard from "./Reaturantcard";
 import {useState ,useEffect} from "react";
 import Shimmer from "./shimmer";
+import filterData from "../../utils/Helper";
+import useOnline from "../../utils/useOnline";
 
 
 
 
-function filterData(searchinput,resturants) {
-    const filterData =
-    // resturants.filter((resturant) => resturant.card.card.info.name.includes(searchinput) 
-    resturants.filter((resturant) => resturant.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.toLowerCase().includes(searchinput.toLowerCase())
 
-    // resturants.filter((resturant) => resturant.info.resturants.includes(searchinput)
-    )
-    return filterData;
-}
 
 
 
@@ -45,8 +39,15 @@ const Body = ()=>{
    }
 
    console.log('render')
-   
 
+  //offline and online 
+   
+  const isOnline = useOnline();
+  console.log('bb',isOnline)
+  if (!isOnline) { 
+    return (<h1> 🟥 You are offline,Check your internet connection</h1>)
+    
+  }
    
   // if (!allResturants)  return null ;
 

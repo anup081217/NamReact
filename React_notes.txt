@@ -1,6 +1,7 @@
 way to use react : 1. using react cdn- not recommended as it uses server link and the link might get down
  2. installing react 
 
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 ====Chapter-3 Igniting Apps =====
 
 Dependencies version 
@@ -91,7 +92,7 @@ https://browserslist.dev/?q=bGFzdCAyICB2ZXJzaW9ucw%3D%3D
     "last 2 chrome versions"
   ]
 
-
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
   +++++++++++++++++++++++++++++++++
   CHAPTER 4 LAYING THE FOUNDATION
   +++++++++++++++++++++++++++++++++
@@ -127,7 +128,7 @@ https://browserslist.dev/?q=bGFzdCAyICB2ZXJzaW9ucw%3D%3D
 
      Any component the name should start with capital letters 
 
-
+ ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
      ********** CHAPTER-5 **********
 
 
@@ -159,7 +160,7 @@ https://browserslist.dev/?q=bGFzdCAyICB2ZXJzaW9ucw%3D%3D
 
 
 
-
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
    ++++++++++++++++++++++
    6.Lets get hooked 
    ++++++++++++++++++++++
@@ -201,6 +202,7 @@ useState is use to create local variable within the functional component .So nev
 
 useState should not be used inside if-else ,for .
 
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 ****** 8.Explore the world *****
 
 There can be two way to render the page :-->
@@ -249,6 +251,7 @@ shimmer ui --> instead of loading loader UI use boxes so that it give good exper
 
 99% of time I will use useState and useEffect hooks only .
 
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 ++++++++++++++++++++++++++++++++
 9.FINDING THE PATH 
 ++++++++++++++++++++++++++++++++
@@ -263,7 +266,7 @@ import { createBrowserRouter ,Routerprovider } from "react-router-dom"; --> help
 
 43:00 -- routing 
 
-⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ 
+⭐⭐⭐⭐
 
 react router dom is not created by meta but by Remix .
 
@@ -423,6 +426,110 @@ import {useParams} from 'react-router-dom' --> helps reading the id .It is hook 
 ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 
 10 .LETS GET CLASSY 
+
+stopped wathing this at 1:16:00 🆎🆎
+
+Class based component - when react started it was just classbased component .there was no function based component or hooks 
+class based component are no longer in use as all new project use function or hook.
+we can also create children of children .
+
+'/' means of root .
+25:00 very important .
+
+if we created children of children then an outlet need to be created under the first children . 
+
+classbased component : 
+class Profile(name) extends React.component {
+   render(){
+      return <h1> axsdsdsddffdf <h1>
+   }
+}
+
+
+two thing : 
+1. Class based component are created diffrently : 
+    class name extends react.component
+
+2. render is Mandatory  .
+
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+OPTIMIZING OUR APP (VIDEO -11)
+
+create our own Hook : 
+Questions : 
+
+When do we build our own hook ? -->
+Why do we build our own hook ? --> Reusabilty ,Readibity , Separation of conecern and maintainibity(as its easy to debug) .
+How do we build our own hook ? -->
+
+modularity - means whe have broken down our codes into meaningful pieces/chunks 
+
+As self created hooks can be used many time at diff places its advisable to create a Separate folder ( generic way to name : utils, shared )
+
+01:00:00 --> online/offline no internet 🔼
+
+1:00:32 --> how to clean event listener cache .
+       return () => {
+   window.removeEventListener("online", handleOnline);
+   window.removeEventListener("offline",handleOffline );
+  }
+
+1:53:00 --> LazyLoading 
+
+small app are created as one bundle (i.e one index.js file) is created in browser but in case of big app if we budle everything in same file it will make our app slow .So we need to segregrate the file and load only when it is required .let say an app has multiple tab if we dont bufle the app in seperate budle all tab will load everytime which is not required hence we segrate the tab so that the page which is click get loaded others are not .
+🌟🌟🌟🌟🌟🌟
+This concept is called : chunking or codesplitting or or dynamic bundling or  or On demand loading or lazy loading.
+
+How to do lazy loading 👍
+
+Instead of importing like this 
+import Instamart from "./component/Instamart";
+
+
+we use dynamic import like this 👍
+1.first import lazy from react library as named import
+import React, { lazy } from "react";
+
+2. lazy function under which u import and  define file path to lazy load 
+
+const Instamart = lazy( ()=> import("./components/Instamart"))
+
+* At first click on instamart it may give error as we have used lazy load here means it take time to load and create instamrt.js file and then load .but when it loaded once the load will be instant becuse now the instamart.js file is part of SPA(single page application)
+
+On react load it will suspend the loading .How to stop this happening ????
+
+We use 'Suspense'
+import React, { lazy,Suspense } from "react";
+
+and then wrap it inside Suspense 
+
+ {
+        path : "/Instamart" ,
+        element :<Suspense><Instamart/></Suspense> ,
+      }
+
+we can also show shimmer when loading ,In lazy laoding and suspense its called fallback and can be used like this 👍
+
+ {
+        path : "/Instamart" ,
+        element :<Suspense fallback = 'shimmer message'><Instamart/></Suspense> ,
+      }
+     if u just want to put a text
+
+      or if u want to call component shimmer like .....
+      {
+        path : "/Instamart" ,
+        element :<Suspense fallback = {<Shimmer/>}><Instamart/></Suspense> ,
+      }
+
+
+
+
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+12- JO DIKHTA HAI WO BIKTA HAI 
+ ( desiging using tailwind CSS)
+
+
 
 
 
