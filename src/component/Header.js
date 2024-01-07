@@ -14,7 +14,7 @@ const Title = () => {
   return (
     <a href = "/">
     <img 
-      className="logo"
+      className= "h-28 px-2"
       alt = "logo"
       //IF WE want to USE CDN FOR IMAGE USE BELOW
       // src="https://wieat.com/wp-content/uploads/2020/05/wieat.png" />
@@ -32,7 +32,7 @@ const Header = () => {
    const [TitleHeading , setTitleHeading] = useState("WiEat")
    const isOnline = useOnline()
     return (
-      <div className="header">
+      <div className="flex justify-between bg-red-200 shadow-lg ">
         <Title/>
         {/* <img 
         className="logo"
@@ -42,14 +42,14 @@ const Header = () => {
 
 
         <div className="nav-items" >
-          <ul>
-            <li><Link to = '/'>Home</Link></li>
+          <ul className="flex py-10 ">
+            <li className ="px-2"><Link to = '/'>Home</Link></li>
             
-            <li> <Link to='/about'>About</Link></li>
-            <li> <Link to = '/contact'>Contact</Link></li>
-            <li> <Link to = '/Instamart'>Instamart</Link></li>
+            <li className ="px-2"> <Link to='/about'>About</Link></li>
+            <li className ="px-2"> <Link to = '/contact'>Contact</Link></li>
+            <li className ="px-2"> <Link to = '/Instamart'>Instamart</Link></li>
 
-            <li>Cart</li>
+            <li className ="px-2">Cart</li>
             
           </ul>
           

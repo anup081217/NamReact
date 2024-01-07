@@ -31,9 +31,9 @@ const Body = ()=>{
 
     const json =  await data.json();
     console.log(json)
-    console.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setallResturants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setfilteredResturants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setallResturants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setfilteredResturants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
    
 
    }
@@ -58,18 +58,18 @@ const Body = ()=>{
     return  allResturants?.length === 0 ? (<Shimmer/>) : (
         
     <>
-      <div className = "search-container">
+      <div className = "search-container p-5 bg-red-200 my-5 ">
 
          <input 
          type = "text" 
-         className = "search-input" 
-          placeholder = "search" 
+         className = "search-input p-3 m-1 rounded-full hover:bg-gray-200 focus:bg-red-100" 
+          placeholder = "Search.." 
           value  = {searchinput}
           
           onChange = {(e)=> {setsearchinput(e.target.value)}}
           />
         
-         <button className ="search-btn" 
+         <button className ="p-3 m-1 bg-purple-400 hover:bg-violet-600 text-white rounded-full " 
         //**  onClick={ ()=> {setsearchClicked("search - clicked ")}} */ 
         onClick={ ()=> {
             
@@ -79,14 +79,14 @@ const Body = ()=>{
         } }
         
         
-        > search - {searchClicked}</button>
+        > {searchClicked}</button>
          <h2>{searchClicked}</h2>   
          
       </div>
 
       
 
-      <div className="resturant-list">
+      <div className="flex flex-wrap">
           {
           filteredResturants?.map((resturant) => {
               return(

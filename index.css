@@ -1,3 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* removed to use tailwind */
+/* 
 .header {
   display: flex;
   justify-content:space-between;
@@ -17,7 +26,7 @@ height: 100px;
   padding: 2px;
   display:flex;
   list-style-type: none;
-  /* color: red; */
+  /* color: red;
   font-size: large;
 }
 
@@ -53,4 +62,4 @@ height: 100px;
   border: 5px;
   background-color: rgb(240, 225, 225);
   margin: 20px;
-}
+} */

@@ -190,7 +190,7 @@ React Hooks -->React hooks are nothing but functions .
 const [ searchtext , usesearchtext] = useState('burger')
 
  returns like -->    [ searchtext(variable name ) , usesearchtext(function to update the variable)] = useState('burger'(is the initial/default value))
-
+ ⭐
  TWO WAY BINDING -- THE HOOK support two way bidning means it read and update simulatenously read in usesearchtext and update update the searchtext
 
  WHY DO WE NEED STATE VARIABLES 
@@ -207,7 +207,7 @@ useState should not be used inside if-else ,for .
 
 There can be two way to render the page :-->
 
-1. Page loads --> call APP --> get response from api which might take 500ms .till this time the page renders nothing.
+1. Page loads --> call APi --> get response from api which might take 500ms .till this time the page renders nothing.
 
 2.Page loads --> render something on page --> then call the API --> and API call will now update the UI.
 2nd approach is good as it give good experience to user as it shows something to user first and then load the infor from API .whereas the first approach shows nothing for 500ms giving bad user experience.
@@ -528,6 +528,152 @@ we can also show shimmer when loading ,In lazy laoding and suspense its called f
 ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 12- JO DIKHTA HAI WO BIKTA HAI 
  ( desiging using tailwind CSS)
+
+ why use CSS frameworks 👍
+ save time .
+ To write optimised CSS .
+
+way to create css:
+ 1.Native way of writng css : crate a .css file and do css there 
+ 2.scss
+
+ 3.
+ Other way is create inline CSS i.e write CSS in same line in component page .(resuabity and repeatibity is issue  bcs css are wrtitten in line and cant be repeated .
+ )
+⭐⭐
+ 4.Use  Component Library like ... material UI ,ANT UI ,base UI,CHAKRA UI 
+   these library are nothing but packages ,so u can use multiple CSS library in on e project .
+   pro and cons of library UI :
+   😀PROS - easy to use , reusable ,auto theameing , give buitl in component ,give consitent UI .make developement fast 
+
+   😃 CONS: make bundle size heavy, we loose control over how my CSS ,personal customisation become hard .
+
+
+5.Styled Component :
+
+6. Taiwind CSS Framework
+  starts at 01:05:00 ⏱️
+   its open source css framework.
+   
+   PROs:
+   CSS on go ie html and css on same line 
+   reusabilty .
+   less bundle size .
+   Flexible UI - means very much customisable which was major con of material UI .
+
+   installing : https://tailwindcss.com/docs/installation
+    
+    Either install the tailwind CSS as npm package or derectly put CDN link in index.html file 
+
+    Tailwind css works just with className .Ex: 
+    <h1 class="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+
+    Using CDN is not good way as in case cdn is down it will impact the page .
+  😀
+    How to install tailwind using npm package ? 
+    Instaaltion for parcel :https://tailwindcss.com/docs/guides/parcel
+
+
+    npm install -D tailwindcss postcss   --> -D is dev dependency and along with tailwind postcss installation is also required post css is used for compilation means it will convert all tailwind css to noraml css 
+    npx tailwindcss init  --> initialising project to use css 
+
+    instation will be seen in packet.json file .
+
+     "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.10.2",
+    "postcss": "^8.4.33",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.1"
+  },
+ ⭐⭐⭐⭐⭐⭐⭐⭐
+  And when we run npx tailwindcss init  .this command will create tailwind.config.js file .This is the file where we do our configurations
+
+  In tailwind.config.js file add below  under content 👍 so basicially add all file with html,js,ts,jsx,tsx} extention as part of tailwind .
+
+  /** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+In Index.css remove all the CSS and just add belwo 3 line 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+Once saved we will not be using our index.html file for CSS .
+
+After installing reload the project -- npx parcel index.html
+
+
+Install etention "Tailwind CSS IntelliSense" --> for autosuggest 
+😄😃
+IF tailiwind doesnot show auto suggestion do "CRTL + SPACEBAR"
+
+😄😃
+Noramlly Tailwind CSS has pre defined spec but what if we need the size or dimension per our required .Then we use ome thing called SQUARE-BRACKET-NOTATION .
+
+HOW TO USE : LEt say in tailwindcss we use <div className="w-52">  in squre bracket notaion we can use like <div className="w-[..here put any dynamic value]"> like <div className="w-[200px]">
+
+cool thing : tailiwindCSS ony ship the command which you used let say "w-20" "bg-500" not all components which save lot of space in CSS file and make css file very small .
+
+Incase of dynamic value"> like <div className="w-[200px]">  it create a seprate dynamic class under css file 
+
+How to fine css file -- Browser - inspect - Network - relaod the page and it will show the css file 
+
+
+HOW to write media Query using taiwind CSS :
+<div className="flex justify-between bg-red-200 shadow-lg sm:bg-purple-900 md:bg-orange-500">
+
+sm fro smal device .md from medium device .
+
+=======
+PRO AND CONS OD TAILWIND (INTERVIEW )
+
+PRO 👍
+EASY debug
+less code 
+easy to use 
+no dplicate css 
+small biudnle size
+fast developement
+easy debug
+much more customise 
+lot more control 
+dont have to move to other file as everything is done under .js file
+
+
+CONS 👎
+to much classes 
+to much code
+there is inital learning curve involved .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
