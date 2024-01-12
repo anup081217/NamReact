@@ -659,6 +659,43 @@ to much classes
 to much code
 there is inital learning curve involved .
 
+ ⭐⭐⭐⭐⭐⭐⭐⭐ ⭐⭐⭐⭐⭐⭐⭐⭐ ⭐⭐⭐⭐⭐⭐⭐⭐  ⭐⭐⭐⭐⭐⭐⭐⭐
+
+ 13.DATA is new oil 
+ --------
+
+ what is diff -- DOM check the diffrence between old and new DOM and then chnages replicate to new DOM .
+
+ there are two layers in a page 
+   UI layer -->
+   Data layer  -->  consist of state and props . 
+
+   whta is diff between state and prop : state is local variable .prop is passing data between one componet to another .
+
+   wht data layer contain : stare and props 
+
+   ✅ INSTALL REACT DEV TOOL for browser extention.
+      when istalled u will see two new thing under browser > inspect > component and profiler.
+      help debug data layer in the app ..
+
+  PROP Drilling : drilling down the  prop component inside the branches is called prop drilling .a prop can be used under branches and branches susequently so drilling is helpful ..
+  prop drilling is helpful in passing the data from top to down or parent to child .
+
+  BUT how to pass data from child to parent ???? ways :
+
+  1.create custom hook .
+  2.
+
+  what if we have numerous branches .Will we passs as many props in each branches in parent to child ..No ? What we use is redux .
+
+  55:00 build accordian(show and hide tabs ) 
+
+  1:00:07 --> Collapsible accordion -means collapse other when clicked one .
+
+  1:15:00 lifting state up .
+
+
+
 
 
 
