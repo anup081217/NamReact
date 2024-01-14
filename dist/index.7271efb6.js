@@ -27445,6 +27445,8 @@ var _wieatPngDefault = parcelHelpers.interopDefault(_wieatPng);
 var _reactRouterDom = require("react-router-dom");
 var _useOnline = require("../../utils/useOnline");
 var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
+var _userContext = require("../../utils/UserContext");
+var _userContextDefault = parcelHelpers.interopDefault(_userContext);
 var _s = $RefreshSig$();
 // const LoggedInUser  = ()=> {
 //    return true ;
@@ -27461,12 +27463,12 @@ const Title = ()=>{
             src: (0, _wieatPngDefault.default)
         }, void 0, false, {
             fileName: "src/component/Header.js",
-            lineNumber: 14,
+            lineNumber: 15,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/component/Header.js",
-        lineNumber: 13,
+        lineNumber: 14,
         columnNumber: 10
     }, undefined);
 };
@@ -27476,19 +27478,20 @@ const Header = ()=>{
     const [isLoggedIn, setisLoggedin] = (0, _react.useState)(true);
     const [TitleHeading, setTitleHeading] = (0, _react.useState)("WiEat");
     const isOnline = (0, _useOnlineDefault.default)();
+    const { user, user2 } = (0, _react.useContext)((0, _userContextDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex justify-between bg-red-200 shadow-lg ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/component/Header.js",
-                lineNumber: 27,
+                lineNumber: 32,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: TitleHeading
             }, void 0, false, {
                 fileName: "src/component/Header.js",
-                lineNumber: 31,
+                lineNumber: 36,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27499,7 +27502,7 @@ const Header = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/component/Header.js",
-                lineNumber: 32,
+                lineNumber: 37,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27515,12 +27518,12 @@ const Header = ()=>{
                                     children: "Home"
                                 }, void 0, false, {
                                     fileName: "src/component/Header.js",
-                                    lineNumber: 37,
+                                    lineNumber: 42,
                                     columnNumber: 34
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/component/Header.js",
-                                lineNumber: 37,
+                                lineNumber: 42,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27532,13 +27535,13 @@ const Header = ()=>{
                                         children: "About"
                                     }, void 0, false, {
                                         fileName: "src/component/Header.js",
-                                        lineNumber: 39,
+                                        lineNumber: 44,
                                         columnNumber: 35
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/component/Header.js",
-                                lineNumber: 39,
+                                lineNumber: 44,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27550,13 +27553,13 @@ const Header = ()=>{
                                         children: "Contact"
                                     }, void 0, false, {
                                         fileName: "src/component/Header.js",
-                                        lineNumber: 40,
+                                        lineNumber: 45,
                                         columnNumber: 35
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/component/Header.js",
-                                lineNumber: 40,
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27568,13 +27571,13 @@ const Header = ()=>{
                                         children: "Instamart"
                                     }, void 0, false, {
                                         fileName: "src/component/Header.js",
-                                        lineNumber: 41,
+                                        lineNumber: 46,
                                         columnNumber: 35
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/component/Header.js",
-                                lineNumber: 41,
+                                lineNumber: 46,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27582,26 +27585,38 @@ const Header = ()=>{
                                 children: "Cart"
                             }, void 0, false, {
                                 fileName: "src/component/Header.js",
-                                lineNumber: 43,
+                                lineNumber: 48,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/component/Header.js",
-                        lineNumber: 36,
+                        lineNumber: 41,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        children: isOnline ? "\uD83D\uDFE2-Online" : "\uD83D\uDD34-offline "
+                        children: isOnline ? "\uD83D\uDFE2-OnLine" : "\uD83D\uDD34-OffLine "
                     }, void 0, false, {
                         fileName: "src/component/Header.js",
-                        lineNumber: 47,
+                        lineNumber: 52,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "p-2 font-bold  text-blue-600",
+                        children: [
+                            " Welcome! ",
+                            user.name,
+                            " "
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/component/Header.js",
+                        lineNumber: 53,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/component/Header.js",
-                lineNumber: 35,
+                lineNumber: 40,
                 columnNumber: 9
             }, undefined),
             isLoggedIn ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27609,24 +27624,24 @@ const Header = ()=>{
                 children: "Logout"
             }, void 0, false, {
                 fileName: "src/component/Header.js",
-                lineNumber: 50,
+                lineNumber: 57,
                 columnNumber: 23
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: ()=>setisLoggedin(true),
                 children: "Login"
             }, void 0, false, {
                 fileName: "src/component/Header.js",
-                lineNumber: 50,
+                lineNumber: 57,
                 columnNumber: 86
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/component/Header.js",
-        lineNumber: 26,
+        lineNumber: 31,
         columnNumber: 10
     }, undefined);
 };
-_s(Header, "ERBHVX8VmruaRvBGoRhmj6E1SWg=", false, function() {
+_s(Header, "ukb1Lo/oCOw1PZuqr76zL8TVW2o=", false, function() {
     return [
         (0, _useOnlineDefault.default)
     ];
@@ -27642,7 +27657,7 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/img/wieat.png":"7UNGl","react-router-dom":"9xmpe","../../utils/useOnline":"bc9W5"}],"7UNGl":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/img/wieat.png":"7UNGl","react-router-dom":"9xmpe","../../utils/useOnline":"bc9W5","../../utils/UserContext":"7To3X"}],"7UNGl":[function(require,module,exports) {
 module.exports = require("2d93b6f8c0965ec6").getBundleURL("aXMci") + "wieat.50952691.png" + "?" + Date.now();
 
 },{"2d93b6f8c0965ec6":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -34201,6 +34216,36 @@ exports.default = useOnline;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7To3X":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$6a66 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6a66.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+const UserContext = /*#__PURE__*/ (0, _react.createContext)({
+    user: {
+        name: "Arya",
+        palce: "UK",
+        email: "arya@gmail.com"
+    },
+    user2: {
+        name: "anup",
+        palce: "UK",
+        email: "anup@gmail.com"
+    }
+});
+UserContext.displayName = UserContext;
+exports.default = UserContext;
+
+  $parcel$ReactRefreshHelpers$6a66.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
 },{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iizf5":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$cee4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -35335,15 +35380,28 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _userContext = require("../../utils/UserContext");
+var _userContextDefault = parcelHelpers.interopDefault(_userContext);
+var _react = require("react");
+var _s = $RefreshSig$();
 const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-        children: "@ Footer-WeEat private Limited.All Rights reserved . @"
-    }, void 0, false, {
-        fileName: "src/component/Footer.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
+    _s();
+    const { user } = (0, _react.useContext)((0, _userContextDefault.default));
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+            children: [
+                "Hi ",
+                user.name,
+                "@ Footer-WeEat private Limited.All Rights reserved . @"
+            ]
+        }, void 0, true, {
+            fileName: "src/component/Footer.js",
+            lineNumber: 9,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
 };
+_s(Footer, "fV01W0EFhpxcsxwq9eE2kaSNZKA=");
 _c = Footer;
 exports.default = Footer;
 var _c;
@@ -35354,7 +35412,7 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"94Koj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../utils/UserContext":"7To3X","react":"21dqq"}],"94Koj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$77f7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

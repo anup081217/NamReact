@@ -1,9 +1,10 @@
 /*This file contain header and title */
 
-import React, { useState } from 'react'
+import React, { useState ,useContext} from 'react'
 import wieat from "../assets/img/wieat.png"
 import { Link } from "react-router-dom";
 import useOnline from '../../utils/useOnline';
+import UserContext from '../../utils/UserContext';
 
 
 // const LoggedInUser  = ()=> {
@@ -31,6 +32,7 @@ const Header = () => {
    const [isLoggedIn, setisLoggedin] = useState(true)
    const [TitleHeading , setTitleHeading] = useState("WiEat")
    const isOnline = useOnline()
+   const {user ,user2} = useContext(UserContext);
     return (
       <div className="flex justify-between bg-red-200 shadow-lg ">
         <Title/>
@@ -53,7 +55,9 @@ const Header = () => {
             
           </ul>
           
-          <h3>{isOnline ? '🟢-Online' : '🔴-offline '}</h3>
+          <h3>{isOnline ? '🟢-OnLine' : '🔴-OffLine '}</h3>
+          <h1  className='p-2 font-bold  text-blue-600'> Welcome! {user.name} </h1>
+          {/* <h1> Welcome! {user2.name} </h1> */}
           
         </div>
         {

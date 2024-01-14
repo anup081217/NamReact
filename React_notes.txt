@@ -672,10 +672,10 @@ there is inital learning curve involved .
 
    whta is diff between state and prop : state is local variable .prop is passing data between one componet to another .
 
-   wht data layer contain : stare and props 
+   wht data layer contain : state and props 
 
    ✅ INSTALL REACT DEV TOOL for browser extention.
-      when istalled u will see two new thing under browser > inspect > component and profiler.
+      when istalled u will see two new thing under browser > inspect > 'component' and 'profiler'.
       help debug data layer in the app ..
 
   PROP Drilling : drilling down the  prop component inside the branches is called prop drilling .a prop can be used under branches and branches susequently so drilling is helpful ..
@@ -692,7 +692,92 @@ there is inital learning curve involved .
 
   1:00:07 --> Collapsible accordion -means collapse other when clicked one .
 
-  1:15:00 lifting state up .
+   
+   till now we createed 3 accordian >on click of one one open/collapse .Here other 3 accordion are not dependent on each other .they are independent .
+
+   But now what we want is if we click on one accordion other will collapse i.e show only one at a time .means here we need to give control to parent .earlier each child has own control.this is called lifting state up .
+
+  1:15:00 lifting state up .--> mean the state will be lifted up will be controlled by parent instead of children.
+
+  1:30:00 -------
+
+  1:57:00 -- Profiler dev tool
+    Install React dev tool and then on page  
+     Inspect --> Profiler 
+     How it ia used ?
+     When u create big application page its tough to troubleshoot .then profiler comes into pictures
+
+     1.Click on "o" icon it will start profiling .You can do activity like navigating page ,click button and profiler will caputre and wathch everything.
+     2. stop
+     3.Clcik on 'FlameGraph' and it will show how much time it took to load .
+     3.Clcick on 'Rank ' show in ascending order which component take how much time .
+
+     so in big page u will get an idea which part takes logn time to load ..and in what order page is getting laoded 
+
+     🤣 Profiler will not work in production or live site(siwggy, youtube) as its blocked or unsupported .
+        Profiler is only meant for developement environment .
+
+
+    ⭐⭐
+    2:08:00 -- Context .
+
+    let say we have to use data like user name at multiple places in page . Using as state or as local varaible is not a good idea .
+    React provide a global storage called 'context' . is shared state for whole app and any components can use this data .
+    'react tor' and NGRX   provide same solution .
+
+    Why we cant create a global varaible --> becuase react doesnot track it .by creating and using context it track the data .
+
+    Steps to use Context 👍
+
+    1 create a file called UserContext.js 
+    2 In that file inport context : import {createContext} from 'react'
+    3. Make a function and call  createContext
+    4.create it as a function .
+
+    let say you want to show data in header ,import the Usercontext.js file in header file .  
+    and import 'UseContext' hook from react .. import UseContext from 'react'
+    
+    const {user} = useContext(UserContext);
+
+    and call this as {user.name} or {user.email} the data which we have defined in context file
+
+
+
+    in jist 1 . createContext and then useContext
+
+    Class component does not support hooks .So how to use context in class component .
+
+    solution : import the context as named component 
+    import UserContext from ./utils 
+
+
+    UserContext.displayName = UserContext; 
+
+    Use above in UserContext.js file will display all UserContext component in inspect > Component page as UserContext.display .By defaul it shows context.display which is generic for all and will our debug easy . 
+
+
+
+
+     ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐
+     14.Lets Build Our store 
+
+     Handling large data in big application is tedious for this we use a lobrary call REDUX .
+
+     WHY WE NEED REDUX :->
+
+     manage data layer of application.
+
+     Why did we use context == to avoid prop drilling .
+
+
+
+
+
+
+
+
+     
+
 
 
 
