@@ -761,7 +761,7 @@ there is inital learning curve involved .
      ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐ ⭐⭐
      14.Lets Build Our store 
 
-     Handling large data in big application is tedious for this we use a lobrary call REDUX .
+     Handling large data in big application is tedious for this we use a library call REDUX .
 
      WHY WE NEED REDUX :->
 
@@ -770,13 +770,107 @@ there is inital learning curve involved .
      Why did we use context == to avoid prop drilling .
 
 
+     Instead of context we can use  REDUX .
+     Redux is used for data managment 
+
+     if small application --> Context is okay .
+     If big application --> Use Redux and alternative of redux(NGRX,Mobex).
 
 
+     CONS of redux ; 
+       complex to setup .
+       very complicated .
+       Lot of code.
+
+      ++ Redux is completly diffrent from Reaact and redux is not part of react .
+      ++ Intially redux was very tough so redux came up with soultio called redux Toolkit .
+
+      https://redux.js.org/introduction/getting-started
 
 
+      we will be using redux ttolkit 
+      https://redux-toolkit.js.org/introduction/getting-started
+
+      diffrence between redux and redux toollkit 👍
+
+      he Redux Toolkit package is intended to be the standard way to write Redux logic. It was originally created to help address three common concerns about Redux:
+
+"Configuring a Redux store is too complicated"
+"I have to add a lot of packages to get Redux to do anything useful"
+"Redux requires too much boilerplate code"
+
+=========
+20:00 important 
+
+Redux Store : end of day is big all object which have diffrent section .
+              all component will be able to access redux store just like what context does .
+
+              A normal component object is somethong local and cannot be accessible to all .
+
+              but redux store is global/central thing and is not tied to any component similar to context . component can be accessed from anywhere in our app.
 
 
-     
+              Wheras prop si like parent-child object .
+
+              We can have multiple context but for redux store we will have only one store to store everything .
+  
+              but Its is bad idea to have everything store in same place right ? no bcs in redux store we will be creating logical seperations.
+              slices of store .each store can have different slices .like cart ,theme ,user slices (just like database tables )
+
+              jargon in redux : 
+               store
+               slices 
+               dispatch
+               action 
+               reducer
+               
+               dispatch and action is like when u click the + icon to buy something it will dispatch and action is sens this to cart .
+
+
+               Flow 👍
+
+                1.Click on '+' or 'add item' icon to add any comodity .
+              
+                2.This add item will call function .(This function which is involved in adding the item to the cart is called "REDUCER')
+
+                3. which update  item to cart (reducer store)
+
+              😁
+                if u click + button it dispatches an action which calls reducer funtion which update slice of redux store 
+
+                dispatch --> dispatch the selection for action ie to reducer function
+                reducer --> the function which process the dispatch action and the sent to slice of reducer store.
+
+                Selector --> If u want to read cart need to call selector . Means when u add items to cart the no of item selected will be processed by selector
+                            or selector is used to read data .at end of day selector is hook (UseSelector)
+                            selector is also known as subscriber as whenever the cart store is modified in redux store selector will auto update the cart in our UI .
+
+              ====================
+                How do u write something into redux store 👍
+                if u click + button it dispatches an action which calls reducer funtion which update slice of redux store 
+
+                How do u read in redux store 👍
+
+                From Selector .
+                which will get info from redux store and update the cart count .
+              =====================
+
+              click on '+' --> dispatches -> action-> reducer updates the store -->and then selector(subscriber) updtae the Cart in UI .
+
+
+              HOW to install redux on your existing project 👍 
+                https://redux-toolkit.js.org/introduction/getting-started
+
+              1  npm install @reduxjs/toolkit    --> this is core redux
+
+              2 npm install react-redux         ---> this is bridge between redux and react .
+
+
+              what is main job of redux : manage store and create slices within store .
+
+              coding start from 1:10:00
+
+
 
 
 
